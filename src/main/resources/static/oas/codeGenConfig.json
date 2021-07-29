@@ -1,0 +1,8 @@
+{
+  "basePackage": "com.sonan.springbootfeaturetoy",
+  "apiPackage": "com.sonan.springbootfeaturetoy.api",
+  "invokerPackage": "com.sonan.springbootfeaturetoy.invoker",
+  "modelPackage": "com.sonan.springbootfeaturetoy.model",
+  "configPackage": "com.sonan.springbootfeaturetoy.config",
+  "serializableModel": true
+}
