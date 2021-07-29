@@ -1,0 +1,41 @@
+openapi: 3.0.3
+info:
+  title: feature-toy
+  description: Spec Driven Development (SDD or ADD) testing.
+  version: 0.0.1
+servers:
+  - url: 'http://localhost:8088'
+tags:
+  - name: jpa
+    description: for testing jpa features.
+paths:
+  /jpa/members:
+    get:
+      tags:
+        - jpa
+      summary: get all members
+      responses:
+        200:
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Member'
+components:
+  schemas:
+    Member:
+      required:
+        - no
+        - email
+      type: object
+      properties:
+        no:
+          type: integer
+          format: int64
+          description: 유니크한 자동 생성된 등록번호
+        email:
+          type: string
+        name:
+          type: string
