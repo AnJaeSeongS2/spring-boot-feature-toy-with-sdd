@@ -6,13 +6,13 @@ info:
 servers:
   - url: 'http://localhost:8088'
 tags:
-  - name: jpa
-    description: for testing jpa features.
+  - name: AFD-Testing
+    description: for testing API First Design
 paths:
-  /jpa/members:
+  /afd-testing/members:
     get:
       tags:
-        - jpa
+        - AFD-Testing
       summary: get all members
       responses:
         200:
@@ -23,12 +23,19 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/Member'
+              example:
+                - no: 0
+                  email: jindam91@naver.com
+                  name: 안재성
+                - no: 1
+                  email: jinam91@gmail.com
+                  name: 안재성2
 components:
   schemas:
     Member:
       required:
-        - no
-        - email
+        - 'no'
+        - 'email'
       type: object
       properties:
         no:
